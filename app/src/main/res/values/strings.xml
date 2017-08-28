@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Pangolin</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="action_github_link">Github Link</string>
+    <string name="action_twitter_link">Twitter Profile</string>
+    <string name="action_email_address">Email Address</string>
+    <string name="action_slack_link">Slack Handle</string>
+
+    <string name="action_send">Send</string>
+</resources>
