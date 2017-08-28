@@ -6,6 +6,13 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Transparent status bar theme -->
+    <style name="TransparentStatusBarAppTheme" parent="AppTheme">
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
 
         <!--transparent status bar -->
         <item name="android:statusBarColor">@android:color/transparent</item>
