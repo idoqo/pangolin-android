@@ -43,6 +43,7 @@ public class MessageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String message = messageET.getText().toString();
+                sendButton.setText(R.string.process_sending);
                 if (message.isEmpty()) {
                     Toast.makeText(MessageActivity.this, R.string.error_empty_message, Toast.LENGTH_SHORT)
                             .show();
@@ -86,7 +87,9 @@ public class MessageActivity extends AppCompatActivity {
                     makeSnackbarResult("Message sending failed :(");
                 }*/
                 //todo fix locationHeader is always null...
-                makeSnackbarResult("Message sent successfully \uD83D\uDD25\uD83D\uDD25");
+                Toast.makeText(MessageActivity.this.getApplicationContext(),
+                        "Message sent successfully \uD83D\uDD25\uD83D\uDD25", Toast.LENGTH_SHORT).show();
+                finish();
             }
 
         }
