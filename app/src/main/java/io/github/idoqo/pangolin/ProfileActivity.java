@@ -1,9 +1,12 @@
 package io.github.idoqo.pangolin;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageButton;
 
@@ -13,6 +16,7 @@ public class ProfileActivity extends AppCompatActivity {
     private ImageButton twitterButton;
     private ImageButton slackButton;
     private ImageButton emailButton;
+    private ImageButton bioButton;
 
     private static final String GITHUB_PROFILE_URL = "https://github.com/idoqo";
     private static final String TWITTER_PROFILE_URL = "https://twitter.com/jordan__zzz";
@@ -32,6 +36,7 @@ public class ProfileActivity extends AppCompatActivity {
         twitterButton = findViewById(R.id.button_twitter);
         slackButton = findViewById(R.id.button_slack);
         emailButton = findViewById(R.id.button_mail);
+        bioButton = findViewById(R.id.button_bio);
 
         githubButton.setOnClickListener(new LinkButtonClickListener(GITHUB_PROFILE_URL));
         twitterButton.setOnClickListener(new LinkButtonClickListener(TWITTER_PROFILE_URL));
@@ -41,6 +46,12 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 lauchMessageActivity();
+            }
+        });
+        bioButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showBioDialog();
             }
         });
     }
@@ -65,5 +76,14 @@ public class ProfileActivity extends AppCompatActivity {
                     .setData(Uri.parse(linkToOpen));
             startActivity(browserIntent);
         }
+    }
+
+    private void showBioDialog() {
+        AlertDialog.Builder bioBuilder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+        bioBuilder.setView(inflater.inflate(R.layout.dialog_bio, null));
+
+        AlertDialog bioDialog = bioBuilder.create();
+        bioBuilder.show();
     }
 }

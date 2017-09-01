@@ -11,4 +11,17 @@
     <string name="action_send">Send</string>
     <string name="process_sending">Sending</string>
     <string name="error_empty_message">Message cannot be empty.</string>
+
+    <string name="bio">
+        I\'m passionate about web, android, programming and tech generally. I also love and contribute
+        to open source projects when I can.
+        \n
+        I work on personal projects such as Radaroid (android client for radar.techcabal.com), Peedgin
+        (online dictionary for Pidgin english), WAEC (Unofficial API for WASSCE results), etc which I
+        sometimes put on my Github.
+        \n
+        \t I am part of the KDE project where I contribute code/documentation to KDEConnect, a tool that
+        helps sync media, uris, files, sms and notifications between Android phones and
+        Linux desktop. I am also a volunteer Firefox advocate to help spread the Firefox gospel.
+    </string>
 </resources>
